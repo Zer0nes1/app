@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Root><Order><Id>1</Id><Customer><Id>1</Id><Name>John Doe</Name><Email>john@example.com</Email></Customer><Items><OrderItem><Product><Id>1</Id><Name>Laptop</Name><Description>A powerful laptop</Description><Price>1000.0</Price><Category><Id>1</Id><Name>Electronics</Name></Category></Product><Quantity>2</Quantity></OrderItem></Items><TotalPrice>2000.0</TotalPrice><Status>Pending</Status></Order></Root>

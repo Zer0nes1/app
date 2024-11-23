@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "customer": {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "items": [
+            {
+                "product": {
+                    "id": 1,
+                    "name": "Laptop",
+                    "description": "A powerful laptop",
+                    "price": 1000.0,
+                    "category": {
+                        "id": 1,
+                        "name": "Electronics"
+                    }
+                },
+                "quantity": 2
+            }
+        ],
+        "total_price": 2000.0,
+        "status": "Pending"
+    }
+]

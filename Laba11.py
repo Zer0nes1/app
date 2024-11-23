@@ -404,6 +404,39 @@ def delete_object_xml(filename, obj_id):
     objects = read_objects_xml(filename)
     objects = [obj for obj in objects if obj.id != obj_id]
     save_to_xml(filename, objects)
+    
+    # CRUD-функции 
+def create_object_json(filename, obj):
+    """Добавить объект в JSON файл"""
+    try:
+        data = load_from_json(filename)
+    except FileNotFoundError:
+        data = []
+    data.append(obj)
+    save_to_json(filename, data)
+
+def read_objects_json(filename):
+    """Прочитать все объекты из JSON файла"""
+    try:
+        return load_from_json(filename)
+    except FileNotFoundError:
+        return []
+
+def update_object_json(filename, obj_id, updated_obj):
+    """Обновить объект по ID в JSON файле"""
+    data = read_objects_json(filename)
+    for i, obj in enumerate(data):
+        if obj.id == obj_id:
+            data[i] = updated_obj
+            save_to_json(filename, data)
+            return True
+    return False
+
+def delete_object_json(filename, obj_id):
+    """Удалить объект по ID из JSON файла"""
+    data = read_objects_json(filename)
+    data = [obj for obj in data if obj.id != obj_id]
+    save_to_json(filename, data)
 
 
     # Пример объектов
